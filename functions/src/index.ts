@@ -25,6 +25,8 @@ const nestApp = createNestServer(server);
 
 export const api = functions.https.onRequest(server);
 
+// Firestore Events
+
 export const onEggWrite = functions.firestore
   .document("Egg/{eggId}")
   .onWrite((change, context) => {
