@@ -1,0 +1,44 @@
+{
+  "name": "functions",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "start:server": "tsc -w",
+    "start:client": "next src/client",
+    "build:server": "tsc",
+    "build:client": "next build src/client",
+    "build": "yarn build:client && yarn build:server",
+    "serve": "npm run build && firebase serve --only functions,hosting",
+    "shell": "npm run build && firebase functions:shell",
+    "deploy": "firebase deploy --only functions,hosting",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "main": "dist/server/index.js",
+  "dependencies": {
+    "@hapi/joi": "^16.1.8",
+    "@nestjs/common": "^6.10.11",
+    "@nestjs/core": "^6.10.11",
+    "@nestjs/platform-express": "^6.10.11",
+    "express": "^4.17.1",
+    "firebase-admin": "^8.0.0",
+    "firebase-functions": "^3.1.0",
+    "next": "^9.1.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.3"
+  },
+  "devDependencies": {
+    "@types/hapi__joi": "^16.0.4",
+    "@types/react": "^16.9.16",
+    "@types/react-dom": "^16.9.4",
+    "cross-env": "^6.0.3",
+    "dotenv-flow": "^3.1.0",
+    "ts-node": "^8.5.4",
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2"
+  },
+  "private": true
+}
