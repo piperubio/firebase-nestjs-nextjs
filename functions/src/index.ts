@@ -25,8 +25,8 @@ const nestApp = createNestServer(server);
 
 export const api = functions.https.onRequest(server);
 
-export const onProfessionalWrite = functions.firestore
-  .document("Professionals/{professionalId}")
+export const onEggWrite = functions.firestore
+  .document("Egg/{eggId}")
   .onWrite((change, context) => {
     nestApp.then(app => {
       return app.get(EggController).event(change, context);
