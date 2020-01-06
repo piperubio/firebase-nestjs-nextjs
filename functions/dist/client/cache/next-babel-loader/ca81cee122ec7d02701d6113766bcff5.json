@@ -1,1 +1,0 @@
-{"ast":null,"code":"var __jsx = React.createElement;\nimport React from \"react\";\nexport default (() => {\n  return __jsx(\"div\", null, __jsx(\"p\", null, \"NestJs + NextJs in Firebase Functions!!!\"), __jsx(\"p\", null, \"APIII KEY= \", process.env.API_KEY));\n});","map":null,"metadata":{},"sourceType":"module"}

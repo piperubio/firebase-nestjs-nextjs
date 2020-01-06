@@ -7,5 +7,6 @@ typings/
 
 node_modules/
 
-#.env
-#.env.development
+.env
+.env.development
+dist
